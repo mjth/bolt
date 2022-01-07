@@ -5,7 +5,7 @@ import LoadingPage from '~/src/pages/Loading'
 
 const Home = lazy(() => import('./pages/Home'))
 
-export default function PageRoutes() {
+export default function Routes() {
     return (
         <Suspense fallback={<LoadingPage />}>
             <ReactRouterRoutes>
