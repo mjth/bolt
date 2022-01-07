@@ -1,8 +1,13 @@
+import { BrowserRouter } from 'react-router-dom'
+import { RecoilRoot } from 'recoil'
+import Routes from './routes'
+
 export default function App() {
-  return (
-    <>
-      <h1>{process.env.APP_NAME}</h1>
-      <span>Hello World</span>
-    </>
-  );
+    return (
+        <RecoilRoot>
+            <BrowserRouter>
+                <Routes />
+            </BrowserRouter>
+        </RecoilRoot>
+    )
 }
