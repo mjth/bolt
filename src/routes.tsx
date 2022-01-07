@@ -3,13 +3,13 @@ import { lazy, Suspense } from 'react'
 import PageNotFound from '~/src/pages/404'
 import LoadingPage from '~/src/pages/Loading'
 
-const HelloWorld = lazy(() => import('./pages/HelloWorld'))
+const Home = lazy(() => import('./pages/Home'))
 
 export default function PageRoutes() {
     return (
         <Suspense fallback={<LoadingPage />}>
             <ReactRouterRoutes>
-                <Route index element={<HelloWorld />} />
+                <Route index element={<Home />} />
                 <Route path="*" element={<PageNotFound />} />
             </ReactRouterRoutes>
         </Suspense>
