@@ -1,0 +1,16 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.linkedEditing": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "search.exclude": {
+        "**/node_modules": true,
+        ".parcel-cache": true,
+        "package-lock.json": true
+    },
+    "files.exclude": {
+        "**/node_modules": true,
+        ".parcel-cache": true,
+        "package-lock.json": true
+    }
+}
