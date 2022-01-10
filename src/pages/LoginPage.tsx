@@ -1,4 +1,4 @@
-import { Field, Form } from 'react-final-form'
+import { Field, Form, FormSpy } from 'react-final-form'
 
 interface Values {
     email: string
@@ -22,39 +22,44 @@ export default function SecondPage() {
         })
         return errors
     }
-
-    const subscription = { submitting: true, pristine: true }
     const initValues = { email: '' }
 
     return (
         <Form
             onSubmit={onSubmit}
             validate={validate}
-            subscription={subscription}
+            subscription={{}}
             initialValues={initValues}
-            render={({ handleSubmit, pristine, submitting, form }) => (
-                <>
-                    <form onSubmit={handleSubmit}>
-                        <FieldExample
-                            name="email"
-                            type="email"
-                            title="Email Address"
-                            placeholder="Email Address"
-                        />
-                        <FieldExample
-                            name="password"
-                            type="password"
-                            title="Password"
-                            placeholder="Password"
-                        />
-                        <input
-                            type="submit"
-                            disabled={pristine || submitting}
-                        />
-                        <button onClick={() => form.reset()}>Reset</button>
-                        {submitting && <span>Loading</span>}
-                    </form>
-                </>
+            render={({ handleSubmit }) => (
+                <form onSubmit={handleSubmit}>
+                    <FieldExample
+                        name="email"
+                        type="email"
+                        title="Email Address"
+                        placeholder="Email Address"
+                    />
+                    <FieldExample
+                        name="password"
+                        type="password"
+                        title="Password"
+                        placeholder="Password"
+                    />
+                    <FormSpy
+                        subscription={{ submitting: true, pristine: true }}
+                        render={({ pristine, submitting, form }) => (
+                            <>
+                                <input
+                                    type="submit"
+                                    disabled={pristine || submitting}
+                                />
+                                <button onClick={() => form.reset()}>
+                                    Reset
+                                </button>
+                                {submitting && <span>Loading</span>}
+                            </>
+                        )}
+                    />
+                </form>
             )}
         />
     )
