@@ -11,7 +11,7 @@ export default function Home() {
             <h1>{process.env.APP_NAME}</h1>
             <HelloWorld />
             <AppUpdateNotice />
-            <PreloadLink to="/second-page">Second Page</PreloadLink>
+            <PreloadLink to="/login">Login</PreloadLink>
         </>
     )
 }

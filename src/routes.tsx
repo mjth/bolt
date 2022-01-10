@@ -7,11 +7,11 @@ import LoadingPage from '~/src/pages/Loading'
 import { useTitle } from 'hoofd'
 
 const Home = lazy(() => import('./pages/Home'))
-const SecondPage = lazy(() => import('./pages/SecondPage'))
+const LoginPage = lazy(() => import('./pages/LoginPage'))
 
 export const RoutesDefinition: RouteObject[] = [
     { index: true, element: <Home /> },
-    { path: '/second-page', element: <SecondPage /> },
+    { path: '/login', element: <LoginPage /> },
     { path: '*', element: <PageNotFound /> },
 ]
 
