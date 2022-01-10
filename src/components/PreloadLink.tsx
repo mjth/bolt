@@ -3,8 +3,10 @@ import { RoutesDefinition } from '~src/routes'
 
 const preloadRouteComponent = (path) => {
     const matchingRoutes = matchRoutes(RoutesDefinition, path)
-    const lazyInitFunction =
-        matchingRoutes[0]?.route?.element?.type?._payload?._result || null
+
+    //@ts-ignore
+    //prettier-ignore
+    const lazyInitFunction = matchingRoutes[0]?.route?.element?.type?._payload?._result || null
     if (typeof lazyInitFunction === 'function') {
         lazyInitFunction()
     }
