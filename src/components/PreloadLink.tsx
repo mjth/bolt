@@ -4,12 +4,14 @@ import { RoutesDefinition } from '~src/routes'
 const preloadRouteComponent = (path) => {
     const matchingRoutes = matchRoutes(RoutesDefinition, path)
 
-    //@ts-ignore
-    //prettier-ignore
-    const lazyInitFunction = matchingRoutes[0]?.route?.element?.type?._payload?._result || null
-    if (typeof lazyInitFunction === 'function') {
-        lazyInitFunction()
-    }
+    //Could be multipled nested routes.
+    matchingRoutes.forEach(({ route }) => {
+        //@ts-ignore
+        const lazyInitFunction = route?.element?.type?._payload?._result || null
+        if (typeof lazyInitFunction === 'function') {
+            lazyInitFunction()
+        }
+    })
 }
 
 export default function PreloadLink({ to, ...rest }) {
