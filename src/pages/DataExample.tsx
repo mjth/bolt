@@ -14,7 +14,7 @@ const Query = graphql`
 `
 
 function DataExampleInner(props) {
-    const data = useLazyLoadQuery<DataExampleQuery>(Query, props.preload)
+    const data = useLazyLoadQuery<DataExampleQuery>(Query)
     return (
         <div>
             <Country country={data.country} />
