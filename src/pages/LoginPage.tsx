@@ -1,3 +1,4 @@
+import { useTitleTemplate } from 'hoofd'
 import { Field, Form, FormSpy } from 'react-final-form'
 
 interface Values {
@@ -5,7 +6,9 @@ interface Values {
     password: string
 }
 
-export default function SecondPage() {
+export default function LoginPage() {
+    useTitleTemplate('Login | %s')
+
     const onSubmit = async (values: Values) => {
         await new Promise((resolve, reject) => {
             setTimeout(resolve, 3000)

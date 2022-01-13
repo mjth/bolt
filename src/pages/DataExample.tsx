@@ -1,3 +1,4 @@
+import { useTitleTemplate } from 'hoofd'
 import { Suspense } from 'react'
 import { graphql, useLazyLoadQuery } from 'react-relay'
 import Country from '~src/components/Country'
@@ -22,6 +23,8 @@ function DataExampleInner(props) {
 }
 
 export default function DataExample(props) {
+    useTitleTemplate('Data Example | %s')
+
     return (
         <Suspense fallback={<>Loading Page Data</>}>
             <DataExampleInner {...props} />
