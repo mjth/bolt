@@ -12,6 +12,7 @@ export default function Home() {
             <HelloWorld />
             <AppUpdateNotice />
             <PreloadLink to="/login">Login</PreloadLink>
+            <PreloadLink to="/data">Data Example Link</PreloadLink>
         </>
     )
 }
