@@ -2,7 +2,7 @@
     "name": "bolt",
     "description": "Opinionated react web app template.",
     "version": "1.0.0",
-    "browserslist": "> 0.5%, last 2 versions, not dead",
+    "browserslist": "> 0.5%, last 2 versions, not dead, ie >= 11",
     "source": "src/index.html",
     "scripts": {
         "dev": "parcel src/index.html --port 3000",
@@ -14,6 +14,7 @@
         "@types/react": "^17.0.38",
         "@types/react-dom": "^17.0.11",
         "babel-plugin-relay": "^13.0.1",
+        "eslint-plugin-relay": "^1.8.3",
         "graphql": "^16.2.0",
         "parcel": "^2.1.1",
         "postcss-preset-env": "^7.2.0",
@@ -33,5 +34,13 @@
         "src": "./src/",
         "schema": "./schema.graphql",
         "language": "typescript"
+    },
+    "eslintConfig": {
+        "plugins": [
+            "relay"
+        ],
+        "extends": [
+            "plugin:relay/recommended"
+        ]
     }
 }
