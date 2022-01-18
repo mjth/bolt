@@ -5,14 +5,14 @@ Stop spending hours configuring the same old libraries, and get started sooner.
 
 All features are optional, so chop and change whatever library you like.
 
-**React**
-**React-Router** - 🌴 For fast reactive routing.
-**Typescript** - 🦾 For strong typing support.
-**ParcelJS** - ✨ Fast bundling, dev server, PostCSS support + more.
-**Recoil** - 🪐 For fast, dynamic state management.
-**Hoofd** - 🤯 For simple, hook-based head management.
-**React Final Form** - 🥊 Super fast form management.
-Presets for Prettier, ESLint, PostCSS.
+**React** <br/>
+**React-Router** - 🌴 For fast reactive routing. <br/>
+**Typescript** - 🦾 For strong typing support. <br/>
+**ParcelJS** - ✨ Fast bundling, dev server, PostCSS support + more. <br/>
+**Recoil** - 🪐 For fast, dynamic state management. <br/>
+**Hoofd** - 🤯 For simple, hook-based head management. <br/>
+**React Final Form** - 🥊 Super fast form management. <br/>
+Presets for Prettier, ESLint, PostCSS. <br/>
 
 Plus support for Firebase or GraphQL via the flavours below.
 
